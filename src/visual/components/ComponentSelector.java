@@ -19,10 +19,11 @@ public class ComponentSelector extends BorderPane implements Selector {
 
 	@Override
 	public void addToLayer() {
+		this.setMinSize(150, 150);
 		this.setTop(title);
 		addAllSelectors();
 		this.setCenter(container);
-		root.setCenter(this);
+		root.setLeft(this);
 		
 		
 	}

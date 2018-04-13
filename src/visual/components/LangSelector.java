@@ -14,7 +14,9 @@ public class LangSelector extends BorderPane implements Selector {
 	private BorderPane root;
 	
 	
+	
 	public LangSelector(BorderPane r){
+		this.setMinSize(600, 150);
 		
 		root = r;
 		

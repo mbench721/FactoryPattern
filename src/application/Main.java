@@ -1,6 +1,7 @@
 package application;
 	
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.stage.Stage;
 import visual.components.ComponentSelector;
 import visual.components.LangSelector;
@@ -18,6 +19,7 @@ public class Main extends Application {
 			BorderPane root = new BorderPane();
 			LangSelector language = new LangSelector(root);
 			language.addToLayer();
+			BorderPane.setAlignment(language, Pos.CENTER);
 			PropertySelector properties = new PropertySelector(root);
 			properties.addToLayer();
 			ComponentSelector components = new ComponentSelector(root);
