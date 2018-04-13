@@ -13,13 +13,13 @@ public class ComponentFactory {
 		switch(c)
 		{
 		case Label:
-			cTemp = new Label(ComponentType.Label);
+			cTemp = new Label(s);
 		case ListBox:
-			cTemp = new ListBox(ComponentType.ListBox);
+			cTemp = new ListBox(s);
 		case MultiTextBox:
-			cTemp = new MultiLineTextBox(ComponentType.MultiTextBox);
+			cTemp = new MultiLineTextBox(s);
 		case TextBox:
-			cTemp = new TextBox(ComponentType.TextBox);
+			cTemp = new TextBox(s);
 		}
 		
 		return cTemp;
