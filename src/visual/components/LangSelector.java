@@ -11,14 +11,14 @@ public class LangSelector extends BorderPane implements Selector {
 	
 	private Label title = new Label("Language Selector");
 	private HBox container = new HBox();
-	private BorderPane root;
+	private GridPane root;
 	
 	
 	
-	public LangSelector(BorderPane r){
+	public LangSelector(GridPane root2){
 		this.setMinSize(600, 150);
 		
-		root = r;
+		root = root2;
 		
 		
 	}
@@ -28,7 +28,7 @@ public class LangSelector extends BorderPane implements Selector {
 		this.setTop(title);
 		addAllSelectors();
 		this.setCenter(container);
-		root.setTop(this);
+		root.add(this,2,0);
 	}
 
 	@Override
