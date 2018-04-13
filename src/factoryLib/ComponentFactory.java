@@ -1,5 +1,6 @@
 package factoryLib;
 
+import factoryLib.components.Button;
 import factoryLib.components.Label;
 import factoryLib.components.ListBox;
 import factoryLib.components.MultiLineTextBox;
@@ -20,6 +21,8 @@ public class ComponentFactory {
 			cTemp = new MultiLineTextBox(s);
 		case TextBox:
 			cTemp = new TextBox(s);
+		case Button:
+			cTemp = new Button(s);
 		}
 		
 		return cTemp;
