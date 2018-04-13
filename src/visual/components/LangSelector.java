@@ -1,5 +1,8 @@
 package visual.components;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
@@ -12,6 +15,7 @@ public class LangSelector extends BorderPane implements Selector {
 	private Label title = new Label("Language Selector");
 	private HBox container = new HBox();
 	private GridPane root;
+	public List<Button> langButtons = new ArrayList<>();
 	
 	
 	
@@ -35,6 +39,7 @@ public class LangSelector extends BorderPane implements Selector {
 	public void addSelector(String text) {
 		 
 		Button added = new Button(text);
+		langButtons.add(added);
 		container.getChildren().add(added);
 		
 	}
@@ -44,6 +49,12 @@ public class LangSelector extends BorderPane implements Selector {
 		addSelector("Java");
 		addSelector("Html");
 		
+		
+	}
+
+	@Override
+	public void addListeners() {
+		// TODO Auto-generated method stub
 		
 	}
 

@@ -2,6 +2,9 @@ package visual.components;
 
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -19,6 +22,7 @@ public class PropertySelector extends BorderPane implements Selector {
 	private int colCount = 1;
 	ColumnConstraints colCons;
 	RowConstraints rowCons;
+	public List<TextField> props = new ArrayList<>();
 
 
 	public PropertySelector(GridPane root2){
@@ -46,6 +50,7 @@ public class PropertySelector extends BorderPane implements Selector {
 	
 		Label propLabel = new Label(text);
 		TextField input = new TextField();
+		props.add(input);
 		input.setMaxWidth(70);
 		contain.add(propLabel, colCount, rowCount);
 		// column=1 row=0
@@ -69,6 +74,13 @@ public class PropertySelector extends BorderPane implements Selector {
 		addSelector("Y Position");
 		addSelector("X Position");
 
+	}
+
+
+	@Override
+	public void addListeners() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

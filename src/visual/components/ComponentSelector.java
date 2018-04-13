@@ -1,5 +1,8 @@
 package visual.components;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
@@ -11,6 +14,7 @@ public class ComponentSelector extends BorderPane implements Selector {
 	private Label title = new Label("Component Selector");
 	private GridPane root;
 	private VBox container = new VBox();
+	public List<Button> comps = new ArrayList<>();
 	
 	public ComponentSelector(GridPane r){
 		
@@ -32,7 +36,7 @@ public class ComponentSelector extends BorderPane implements Selector {
 	@Override
 	public void addSelector(String text) {
 		Button comp = new Button(text);
-		
+		comps.add(comp);
 		container.getChildren().add(comp);
 		
 	}
@@ -44,6 +48,12 @@ public class ComponentSelector extends BorderPane implements Selector {
 		addSelector("Text Box");
 		addSelector("List Box");
 		addSelector("Multi Line Text Box");
+		
+	}
+
+	@Override
+	public void addListeners() {
+		// TODO Auto-generated method stub
 		
 	}
 
