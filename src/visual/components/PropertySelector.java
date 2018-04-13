@@ -13,7 +13,7 @@ import javafx.scene.layout.RowConstraints;
 
 public class PropertySelector extends BorderPane implements Selector {
 
-	private BorderPane root;
+	private GridPane root;
 	private GridPane contain = new GridPane();
 	private int rowCount = 0;
 	private int colCount = 1;
@@ -21,9 +21,9 @@ public class PropertySelector extends BorderPane implements Selector {
 	RowConstraints rowCons;
 
 
-	public PropertySelector(BorderPane r){
+	public PropertySelector(GridPane root2){
 		colCons = new ColumnConstraints(2);
-		root = r;
+		root = root2;
 		this.setMinSize(150, 150);
 
 
@@ -34,7 +34,7 @@ public class PropertySelector extends BorderPane implements Selector {
 	public void addToLayer() {
 		addAllSelectors();
 		this.setCenter(contain);
-		root.setRight(this);
+		root.add(this,2,1);
 
 	}
 

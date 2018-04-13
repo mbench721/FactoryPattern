@@ -3,15 +3,16 @@ package visual.components;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 public class ComponentSelector extends BorderPane implements Selector {
 	private Label title = new Label("Component Selector");
-	private BorderPane root;
+	private GridPane root;
 	private VBox container = new VBox();
 	
-	public ComponentSelector(BorderPane r){
+	public ComponentSelector(GridPane r){
 		
 		root = r;
 		
@@ -23,7 +24,7 @@ public class ComponentSelector extends BorderPane implements Selector {
 		this.setTop(title);
 		addAllSelectors();
 		this.setCenter(container);
-		root.setLeft(this);
+		root.add(this,1,1);
 		
 		
 	}
@@ -39,6 +40,10 @@ public class ComponentSelector extends BorderPane implements Selector {
 	@Override
 	public void addAllSelectors() {
 		addSelector("Button");
+		addSelector("Label");
+		addSelector("Text Box");
+		addSelector("List Box");
+		addSelector("Multi Line Text Box");
 		
 	}
 

@@ -1,6 +1,7 @@
 package application;
 	
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.stage.Stage;
 import visual.components.ComponentSelector;
@@ -9,6 +10,7 @@ import visual.components.PropertySelector;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 
 
 public class Main extends Application {
@@ -16,7 +18,11 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			
-			BorderPane root = new BorderPane();
+			GridPane root = new GridPane();
+			root.setHgap(50); //horizontal gap in pixels => that's what you are asking for
+			root.setVgap(20);
+			root.setPadding(new Insets(10, 10, 10, 10));
+			
 			LangSelector language = new LangSelector(root);
 			language.addToLayer();
 			BorderPane.setAlignment(language, Pos.CENTER);
@@ -25,9 +31,10 @@ public class Main extends Application {
 			ComponentSelector components = new ComponentSelector(root);
 			components.addToLayer();
 			Button submit = new Button("Submit");
-			root.setBottom(submit);
+			root.add(submit,2,3);
 			
-			Scene scene = new Scene(root,600,600);
+			Scene scene = new Scene(root,600,500);
+			primaryStage.setTitle("Factory Pattern WYSIWYG");
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
