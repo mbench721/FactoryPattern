@@ -1,20 +1,15 @@
 package factoryLib;
 
 public abstract class Component {
-	private ComponentType componentType;
+	private TargetSource source;
+	private ComponentType type;
 	private String content;
 	private int height;
 	private int width;
-	private int topPadding;
-	private int leftPadding;
+	private int yPosition;
+	private int xPosition;
 	
 	
-	public ComponentType getComponentType() {
-		return componentType;
-	}
-	public void setComponentType(ComponentType componentType) {
-		this.componentType = componentType;
-	}
 	public String getContent() {
 		return content;
 	}
@@ -33,22 +28,46 @@ public abstract class Component {
 	public void setWidth(int width) {
 		this.width = width;
 	}
-	public int getTopPadding() {
-		return topPadding;
+	public TargetSource getSource() {
+		return source;
 	}
-	public void setTopPadding(int topPadding) {
-		this.topPadding = topPadding;
+	public void setSource(TargetSource source) {
+		this.source = source;
 	}
-	public int getLeftPadding() {
-		return leftPadding;
+	public ComponentType getType() {
+		return type;
 	}
-	public void setLeftPadding(int leftPadding) {
-		this.leftPadding = leftPadding;
+	public void setType(ComponentType type) {
+		this.type = type;
+	}
+	public int getyPosition() {
+		return yPosition;
+	}
+	public void setyPosition(int yPosition) {
+		this.yPosition = yPosition;
+	}
+	public int getxPosition() {
+		return xPosition;
+	}
+	public void setxPosition(int xPosition) {
+		this.xPosition = xPosition;
+	}
+	public int getXPosition() {
+		return xPosition;
+	}
+	public void setXPosition(int xposition) {
+		this.xPosition = xposition;
 	}
 	
 	public Component(ComponentType cType)
 	{
-		setComponentType(cType);
+		setType(cType);
+	}
+	
+	public Component(ComponentType cType, TargetSource source)
+	{
+		setType(cType);
+		setSource(source);
 
 	}
 }

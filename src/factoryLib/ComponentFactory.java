@@ -6,7 +6,7 @@ import factoryLib.components.MultiLineTextBox;
 import factoryLib.components.TextBox;
 
 public class ComponentFactory {
-	static Component InitializeComponent(ComponentType c)
+	static Component InitializeComponent(ComponentType c, TargetSource s)
 	{
 		Component cTemp = null;
 		
