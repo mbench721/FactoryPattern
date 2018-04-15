@@ -16,7 +16,7 @@ public class HTML extends Language {
 
 	@Override
 	public String executeCommand(boolean wait) {
-		String html = "C:\\Program Files\\Java\\jdk1.8.0_65\\bin\\javac.exe -d D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\src\\HMLTOutput.html",
+		String html = "rundll32 url.dll,FileProtocolHandler \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\src\\HMLTOutput.html\"",
 				result = "";
 		try {
 			Process pro = Runtime.getRuntime().exec(html);

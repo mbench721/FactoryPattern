@@ -39,8 +39,8 @@ public class Java extends Language {
 	// + javaClass
 	@Override
 	public String executeCommand(boolean wait) {
-		String javac = "\"C:\\Program Files\\Java\\jdk1.8.0_65\\bin\\javac.exe\" -d \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\src\\View\" \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\src\\View\\"+javaClass+".java", 
-				java = "\"C:\\Program Files\\Java\\jdk1.8.0_65\\bin\\java\" -classpath \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\bin\\View\\"+javaClass+".class", 
+		String javac = "\"C:\\Program Files\\Java\\jdk1.8.0_65\\bin\\javac.exe\" -d \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\bin\" \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\src\\View\\" + javaClass + ".java\"", 
+				java = "\"C:\\Program Files\\Java\\jdk1.8.0_65\\bin\\java\" -cp \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\bin\" View."+javaClass, 
 				result = "";
 		try {
 			Process pro = Runtime.getRuntime().exec(javac);
