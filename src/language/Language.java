@@ -7,9 +7,7 @@ import java.io.InputStreamReader;
 
 abstract public class Language {
 	
-	abstract public void generateSourceCode();
 	abstract public String executeCommand(boolean wait);
-	abstract public void compile();
 	private static String getLines(String name, InputStream in) throws IOException{
 		String line = "", result = "";
 		BufferedReader reader = new BufferedReader(new InputStreamReader(in));

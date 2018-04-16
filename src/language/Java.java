@@ -11,32 +11,12 @@ public class Java extends Language {
 		this.javaClass = javaClass;
 	}
 
-	public Java() {
-	}
 
 	public Java(String javaClass) {
 		setJavaClass(javaClass);
 	}
 
-	@Override
-	public void generateSourceCode() {
-		// TODO Auto-generated method stub
 
-	}
-
-	@Override
-	public void compile() {
-		// TODO Auto-generated method stub
-
-	}
-
-	// "\"C:\\Program Files\\Java\\jdk1.8.0_65\\bin\\javac.exe\" -d
-	// \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\classes\"
-	// \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\src\\View\\"
-	// + javaClass + ".java\""
-	// "\"C:\\Program Files\\Java\\jdk1.8.0_65\\bin\\java\" -classpath
-	// \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\classes\" View."
-	// + javaClass
 	@Override
 	public String executeCommand(boolean wait) {
 		String javac = "\"C:\\Program Files\\Java\\jdk1.8.0_65\\bin\\javac.exe\" -d \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\bin\" \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\src\\View\\" + javaClass + ".java\"", 

@@ -3,18 +3,6 @@ package language;
 public class HTML extends Language {
 
 	@Override
-	public void generateSourceCode() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void compile() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public String executeCommand(boolean wait) {
 		String html = "rundll32 url.dll,FileProtocolHandler \"D:\\Users\\ZFleezy\\workspace\\FactoryPattern\\src\\HMLTOutput.html\"",
 				result = "";
